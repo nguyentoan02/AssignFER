@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const navigations = [
     {
@@ -22,6 +22,10 @@ const navigations = [
 ]
 
 const Header = () => {
+    const navigate = useNavigate();
+    const handelToCart = () => {
+        navigate('/cart')
+    }
     return (
         <div>
             <header className="text-gray-600 body-font shadow-lg">
@@ -42,7 +46,7 @@ const Header = () => {
                         }
 
                     </nav>
-                    <button className="inline-flex items-center text-white bg-indigo-500 border-0 py-2 px-4 focus:outline-none hover:bg-indigo-700 rounded text-base mt-4 md:mt-0">Go to Cart
+                    <button className="inline-flex items-center text-white bg-indigo-500 border-0 py-2 px-4 focus:outline-none hover:bg-indigo-700 rounded text-base mt-4 md:mt-0" onClick={handelToCart}>Go to Cart
                         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-4 h-4 ml-1" viewBox="0 0 24 24">
                             <path d="M5 12h14M12 5l7 7-7 7"></path>
                         </svg>
