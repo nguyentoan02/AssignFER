@@ -5,13 +5,13 @@ import { useState } from 'react'
 function Cart() {
     const cart = JSON.parse(localStorage.getItem('cart')) || []
     const navigate = useNavigate()
-    const [total,setTotal] = useState(0)
-    useEffect(()=>{
-        const total = cart.reduce((acc,item)=>{
+    const [total, setTotal] = useState(0)
+    useEffect(() => {
+        const total = cart.reduce((acc, item) => {
             return acc + (item.price * item.quantity)
-        },0)
+        }, 0)
         setTotal(total)
-    },[cart])
+    }, [cart])
     const handelRemoveItem = (id) => {
         const updatedCart = cart.filter(item => item.id !== id)
         localStorage.setItem('cart', JSON.stringify(updatedCart))
@@ -33,15 +33,38 @@ function Cart() {
     const handelDec = (id) => {
         const updatedCart = cart.map(item => {
             if (item.id === id) {
+                if (item.quantity === 1) {
+                    return null
+                }
                 return {
                     ...item,
                     quantity: item.quantity - 1
                 }
             }
             return item
-        })
+        }).filter(item => item !== null)
         localStorage.setItem('cart', JSON.stringify(updatedCart))
         navigate('/cart')
+    }
+
+    if (cart.length === 0) {
+        return (
+            <>
+                <div className=' h-[55vh] flex justify-center items-center'>
+                    <Link to={'/'}
+                        class="rounded-full py-4 w-full max-w-[400px]  flex items-center bg-indigo-50 justify-center transition-all duration-500 hover:bg-indigo-100">
+                        <span class="px-2 font-semibold text-lg leading-8 text-indigo-600">Cart is empty Continue Shopping</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                            <path d="M8.25324 5.49609L13.7535 10.9963L8.25 16.4998" stroke="#4F46E5" stroke-width="1.6"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </Link>
+                </div>
+
+            </>
+
+
+        )
     }
 
     return (
