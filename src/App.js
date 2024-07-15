@@ -10,6 +10,7 @@ import Products from './modules/Products';
 import Cart from './modules/Cart'
 
 import CategoryProducts from './modules/CategoryProducts';
+import AboutUs from './components/AboutUs/aboutus';
 
 
 function App() {
@@ -22,10 +23,10 @@ function App() {
         <Route path='/products' element={<Products />} />
         <Route path='*' element={<div>404 Page</div>} />
 
-        <Route path="/cart" element={<Cart/>} />
+        <Route path="/cart" element={<Cart />} />
 
         <Route path='categories/:name' element={<CategoryProducts />} />
-
+        <Route path='/about' element={<AboutUs />} />
       </Routes>
       <Footer />
     </div>
