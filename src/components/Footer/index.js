@@ -35,7 +35,7 @@ const Footer = () => {
                                 <h2 class="inline-block text-2xl pb-4 mb-4 border-b-4 border-blue-600">Company</h2>
                             </div>
                             <ul class="leading-8">
-                                <Link to={'/about'}><a href="#" class="hover:text-blue-400">About Us</a ></Link>
+                                <Link to={'/about'}><a href="#" class="hover:text-blue-400">About Us</a></Link>
                                 <li><a href="#" class="hover:text-blue-400">Terms &amp; Conditions</a></li>
                                 <li><a href="#" class="hover:text-blue-400">Privacy Policy</a></li>
                                 <li><a href="#" class="hover:text-blue-400">Contact Us</a></li>
