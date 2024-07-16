@@ -1,0 +1,21 @@
+{
+  "user": [
+    {
+      "fname": "yousaf",
+      "lname": "khan",
+      "email": "yousaft@gmail.com",
+      "password": "123456",
+      "cpassword": "123456",
+      "id": 1
+    },
+
+    {
+      "fname": "toan",
+      "lname": "Nguyen",
+      "email": "toannguyen@gmail.com",
+      "password": "123456",
+      "cpassword": "123456",
+      "id": 2
+    }
+  ]
+}

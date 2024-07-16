@@ -11,6 +11,7 @@ import Cart from './modules/Cart'
 
 import CategoryProducts from './modules/CategoryProducts';
 import AboutUs from './components/AboutUs/aboutus';
+import Login from './components/Login/Login';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
 
         <Route path='categories/:name' element={<CategoryProducts />} />
         <Route path='/about' element={<AboutUs />} />
+        <Route path='/login' element={<Login />} />
       </Routes>
       <Footer />
     </div>
