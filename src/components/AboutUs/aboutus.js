@@ -6,7 +6,7 @@ const AboutUs = () => {
             <section id="features" className="relative block px-6 py-10 md:py-20 md:px-10 border-t border-b border-neutral-900 bg-neutral-900/30">
                 <div className="relative mx-auto max-w-5xl text-center">
                     <span className="text-gray-400 my-3 flex items-center justify-center font-medium uppercase tracking-wider">
-                        Why choose us
+                        Why choose us haha
                     </span>
                     <h2 className="block w-full bg-gradient-to-b from-white to-gray-400 bg-clip-text font-bold text-transparent text-3xl sm:text-4xl">
                         The number of diverse customers and the number of products sold come with reputation
