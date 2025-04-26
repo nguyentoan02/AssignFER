@@ -20,6 +20,7 @@ function App() {
       <Header />
 
       {/* route */}
+      {/* haha */}
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/products/:id' element={<Product />} />
