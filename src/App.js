@@ -18,6 +18,8 @@ function App() {
   return (
     <div>
       <Header />
+
+      {/* route */}
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/products/:id' element={<Product />} />
